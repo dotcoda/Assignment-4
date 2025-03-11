@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-secondary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">PHP</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Explore</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Profile</a>
+              </li>
+            </ul>
+            <span class="navbar-text">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+      </nav>
+
+      <main>
+        <div class="container mt-5">
+
+        <div class="col-sm-7 mx-auto">
+        <div class="card mb-3 p-2">
+            <div class="row g-0">
+              <div class="col-md-3">
+                <img src="/placeholder.jpg" class="img-fluid rounded-circle" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title ">Jane Doe</h5>
+                  <p class="card-text">Love working outdoors and happy to lend a hand with yard work! Available for weeding, trimming, and general maintenance—just here to help where I can.</p>
+                  <p class="card-text"><small class="text-body-secondary">Last online 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-3">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Located In: <b><a class="link-secondary" href="/#">Steven's Point, WI</a></b></li>
+              <li class="list-group-item">Looking to: <b>volunteer</b></li>
+              <li class="list-group-item">Interested In: 
+                <button type="button" class="btn btn-secondary btn-sm">Gardening</button> 
+                <button type="button" class="btn btn-secondary btn-sm">Yard Work</button>
+                <button type="button" class="btn btn-secondary btn-sm">Reoccuring</button>
+              </li>
+            </ul>
+          </div>
+
+
+<div class="mx-auto p-2" style="width: 200px;">
+<button id="toastBtn" class="btn btn-secondary icon-link">
+  <svg id="toastIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left" viewBox="0 0 16 16">
+    <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+</svg>
+  Send a Message</button>
+</div>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="dynamicToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+           
+            <div class="d-flex">
+            <div class="toast-body">
+                First message.
+            </div>
+            <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let firstClick = true;
+        document.getElementById("toastBtn").addEventListener("click", function() {
+            let toastEl = document.getElementById("dynamicToast");
+            let toastBody = toastEl.querySelector(".toast-body");
+            let toastBtn = document.getElementById("toastBtn");
+            let toastIcon = document.getElementById("toastIcon");
+
+            if (firstClick) {
+                toastBody.textContent = "A message request has been sent to this user.";
+                toastBtn.className = "btn btn-outline-secondary btn-transition";
+                toastIcon.outerHTML = '<svg id="toastIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16"> <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/> <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/> </svg>';
+                firstClick = false;
+            } else {
+                toastBody.textContent = "A message request has already been sent.";
+            }
+
+            let toast = new bootstrap.Toast(toastEl);
+            toast.show();
+        });
+    </script>
+
+
+
+          </div></div>
+      </main>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
